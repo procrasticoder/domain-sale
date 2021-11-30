@@ -15,20 +15,20 @@ nav{
     width: 100%;
     max-height: 80px;
     align-items: center;
-    background: linear-gradient(135deg, white 40%, #04294f 40%);
+    /* background: linear-gradient(135deg, white 40%, #04294f 40%); */
+    background-color: #04294f;
 }
-nav .logo{
-    width: 50%;
-    z-index: 1;
-}
+
 header img{
     object-fit: cover;
     height: 100px;
 }
 header .menu{
-    width: 50%;
-    display: flex;
-    justify-content: right;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
 }
 .menu i{
@@ -98,56 +98,8 @@ header .menu{
     opacity: 0.1;
 
 }
-@media screen and (max-width:768px) {
-    nav{
-        display: flex;
-        flex-direction: column;
-        height: 24vh;
-        max-height: 150px;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background: linear-gradient(180deg, white 50%, #04294f 50%);
-    }
-    nav .logo{
-        width: 100%;
-        z-index: 1;
-    }
-    header img{
-        object-fit: cover;
-        height: 70px;
-    }
-    header .menu{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-    }
-    .content{
-        position: relative;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .content h1{
-        font-size: 1.5rem;
-    }
-    .content-left img{
-        object-fit: cover;
-        height: 300px;
-    }
-    .content-right button{
-        display: block;
-        margin: 20px auto;
-        padding: 10px;
-        font-size: 1rem;
-        outline: none;
-        border: none;
-        background: #04294f;
-        color: #fff;
-        border-radius: 4px;
-    }
+@media screen and (max-width:768px) and (min-width:425px) {
+    
     
 }
 
@@ -156,52 +108,29 @@ header .menu{
         overflow-y: scroll;
     }
     nav{
-        display: flex;
-        flex-direction: column;
-        height: 30vh;
-        max-height: 150px;
-        align-items: flex-start;
-        justify-content: center;
-        background: linear-gradient(180deg, white 55%, #04294f 55%);
-    }
-    nav .logo{
-        width: 100%;
-        z-index: 1;
-    }
-    header img{
-        object-fit: cover;
-        height: 70px;
+        height: fit-content;
+        max-height: fit-content;
+        background-color: #04294f;
+        padding: 20px;
     }
     header .menu{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        z-index: 1;
-        padding-left: 10px;
+    grid-template-columns: 1fr ; 
+    height: 100%;
+       
     }
-    .menu i{
-        font-size: 1rem;
-        margin: auto 5px;
-        color: #fff;
-    
+    .content-right{
+        padding-left: 0px;
+    }
+    img
+    {
+        width: 100%;
     }
     .content{
         position: relative;
-        height: 80vh;
+        height: 96vh;
         display: flex;
-        padding-top: 100px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .content h1{
-        font-size: 1.2rem;
-    }
-    .content-left img{
-        object-fit: cover;
-        height: 300px;
-    }
-    
 }
